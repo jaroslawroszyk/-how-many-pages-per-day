@@ -35,7 +35,7 @@ HowManyPages enterdata()
     return p;
 }
 
-void sum()
+void sum(HowManyPages p)
 {
     std::string line;
     std::cout << "sum all pages \n";
@@ -45,8 +45,15 @@ void sum()
     {
         while (getline(outFile, line))
         {
-            std::cout << line << "\n";
+            for(auto i : line)
+            {
+                p.sum += p.pages;
+                
+            }
+            // std::cout << line << "\n";
+            
         }
+        
         outFile.close();
     }
     else
@@ -75,8 +82,9 @@ void menu()
         }
         case Pages::p_Sum:
         {
+            HowManyPages sume;
             system("clear");
-            sum();
+            sum(sume);
             break;
         }
         case Pages::p_exit:

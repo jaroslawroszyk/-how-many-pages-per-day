@@ -14,13 +14,14 @@ struct HowManyPages
 {
     std::string date;
     int pages = 0;
+    int sum = 0;
     HowManyPages enterdata();
     HowManyPages SaveToFile(HowManyPages savedate);
 
     // HowManyPages show();
 };
 // # g++ main.cpp pages.cpp -o Howmany
-void sum(); //a function that sums up all the page counts in a file
+void sum(HowManyPages p); //a function that sums up all the page counts in a file
 
 
 void menu();
