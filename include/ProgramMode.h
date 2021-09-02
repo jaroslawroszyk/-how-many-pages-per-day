@@ -2,6 +2,7 @@
 #include <fstream>
 
 
+
 enum class ProgramMode
 {
     p_PagesDay = 1,
